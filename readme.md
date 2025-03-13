@@ -45,8 +45,8 @@
 ---
 
 ## 📬 Contact | 联系方式
-💡 ** Have suggestions for improving the visualizations? Open an issue or reach out to discuss!**
-💡 ** 有更好的可视化想法？欢迎交流！**
+💡 **Have suggestions for improving the visualizations? Open an issue or reach out to discuss!**
+💡 **有更好的可视化想法？欢迎交流！**
 
 ## 📧 Email: Van_Wu1@outlook.com
 ## 🌐 GitHub: Van-Wu1
