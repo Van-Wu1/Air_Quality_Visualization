@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction | Global Air Quality Visualization</title>
+    <style>
+        /* 全局 */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1f1f1f;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden; 
+        }
+
+        /* 头 */
+        .header {
+            text-align: center;
+            padding: 30px 20px;
+            background: linear-gradient(to right, #0c2142, #2a7ba4);
+            width: 100%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        .header p {
+            font-size: 16px;
+            opacity: 0.8;
+        }
+
+        /* 内容 */
+        .container {
+            max-width: 900px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #00d4ff;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #e0e0e0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            font-size: 18px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+        }
+
+        ul li::before {
+            content: "✔️";
+            margin-right: 10px;
+            color: #00ff88;
+        }
+
+        /* 按钮 */
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            text-decoration: none;
+            font-size: 18px;
+            padding: 12px 20px;
+            background: #4294a4;
+            color: #000;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #00ff88;
+            transform: scale(1.05);
+        }
+
+        /* 页脚 */
+        .footer {
+            margin-top: 40px;
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+            color: #b0b0b0;
+            width: 100%;
+            background: linear-gradient(to right, #0c2142, #2a7ba4);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>🌫️ Global Air Quality Visualization Project</h1>
+        <p>Powered by VanWU1 Studio</p>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <h2>About This Project</h2>
+            <p>
+                <strong>Global Air Quality Visualization</strong> is an interactive web platform that provides 
+                <strong>real-time air quality data</strong> and <strong>7-day forecasts</strong> for <strong>global 81 cities</strong>. 
+                This project aims to help users understand air pollution trends through <strong>interactive maps and charts</strong>.
+            </p>
+            <p>
+                <strong>⭐Author's brain dump:</strong> This project originated from an assignment in the <strong> CASA 0003 course</strong>.  
+                In fact, it was somewhat overworked, but the author's beautiful mental state（留子美丽的精神状态🥴） kept her tirelessly working on the frontend without rest. 
+                And she found front-end design as addictive as a drug. She even set up a studio for herself.
+            </p>
+            <p>
+                A big shoutout to our course instructor,<strong> Duncan Smith</strong>—a very adorable and dedicated handsome man (hope this doesn't get seen?  
+                She really love this course and this teacher! She is wondering maybe she can do some visualization for my dissertation…? She just love frontend so much.
+            </p>
+        </section>
+
+        <section class="features">
+            <h2>Key Features</h2>
+            <ul>
+                <li>📌 Real-Time AQI Data - Get live air quality data for 81 cities worldwide.</li>
+                <li>📊 7-Day PM2.5 Forecast - Predict air pollution trends to plan your activities.</li>
+                <li>🗺️ Interactive Map - Visualize global AQI with an intuitive map even roaming the continent.</li>
+                <li>🔍 Report export - More detailed air quality data can be downloaded.</li>
+            </ul>
+        </section>
+
+        <nav class="nav-buttons">
+            <a href="vis.html" class="btn">🌎 Explore Visualization</a>
+            <a href="Cover_Origin _File.html" class="btn">🏠 Back to Home</a>
+        </nav>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 VanWU1 Studio. All rights reserved.</p>
+    </footer>
+</body>
+</html>

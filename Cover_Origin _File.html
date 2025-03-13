@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Global Air Quality Visualization Poweredby VanWU1Studio</title>
+  <link rel="stylesheet" href="./src/styles/cover.css">
+</head>
+
+
+<body>
+  <div id="cover">
+    <header class="header">
+    </header>
+    <main class="container">
+      <div class="intro">
+        <h1>Hello there <span class="wave">👋</span></h1>
+        <p>
+          Explore 
+      <strong style="font-size: larger;">
+        Real-Time air quality data
+      </strong> 
+      and 
+      <strong style="font-size: larger;">
+        7-day forecasts
+      </strong> 
+      for 
+      <strong style="font-size: larger;">
+        global 81 cities
+      </strong>. 
+      This platform offers 
+      <strong style="font-size: larger;">
+        interactive maps
+      </strong> 
+      and 
+      <strong style="font-size: larger;">
+        charts
+      </strong> 
+      to help you stay informed and plan accordingly.
+        </p>
+        <a href="#" class="showreel">▶ pm10, pm25, so2, no2, AQI</a>
+      </div>
+
+      <nav class="menu">
+        <ul>
+          <li onclick="location.href='01.html';" style="cursor: pointer;"><span>01</span> Overview</li>
+          <li onclick="location.href='02.html';" style="cursor: pointer;"><span>02</span> Data & Sources</li>
+          <li onclick="location.href='03.html';" style="cursor: pointer;"><span>03</span> Meet the Author</li>
+          <li onclick="location.href='04.html';" style="cursor: pointer;"><span>04</span> Future Plans</li>
+        </ul>
+      </nav>
+      <div class="scroll-hint1">Scroll down to continue...</div>
+    </main>
+  </div>
+
+
+  <!-- 滚轮+动画 -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cover = document.getElementById('cover');
+
+      cover.addEventListener('wheel', (e) => {
+      // 只有当 deltaY > 0（向下滚）时才执行
+      if (e.deltaY > 0) {
+      cover.classList.add('fadeOut');
+      //window.location.href = 'index.html';
+      setTimeout(() => {
+          window.location.href = 'vis.html';
+        }, 717);
+      }
+      }, { once: true });
+    });
+  </script>
+</body>
+</html>
+

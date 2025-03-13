@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Plans | Global Air Quality Visualization</title>
+    <style>
+        /* 全局 */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1f1f1f;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        /* 头部 */
+        .header {
+            text-align: center;
+            padding: 30px 20px;
+            background: linear-gradient(to right, #0c2142, #2a7ba4);
+            width: 100%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        .header p {
+            font-size: 16px;
+            opacity: 0.8;
+        }
+
+        /* 主体 */
+        .container {
+            max-width: 900px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #00d4ff;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #e0e0e0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            font-size: 18px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+        }
+
+        ul li::before {
+            content: "✔️";
+            margin-right: 10px;
+            color: #00ff88;
+        }
+
+        /* 按钮 */
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            text-decoration: none;
+            font-size: 18px;
+            padding: 12px 20px;
+            background: #4294a4;
+            color: #000;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #00ff88;
+            transform: scale(1.05);
+        }
+
+        /* 页脚 */
+        .footer {
+            margin-top: 40px;
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+            color: #b0b0b0;
+            width: 100%;
+            background: linear-gradient(to right, #0c2142, #2a7ba4);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>🌫️ Global Air Quality Visualization Project</h1>
+        <p>Powered by VanWU1 Studio</p>
+    </header>
+
+    <main class="container">
+        <section class="future-plans">
+            <h2>Future Plans</h2>
+            <p>Here’s what’s coming next! (if I have time):</p>
+            <ul>
+                <li>📈 <strong>More Cities</strong> - Expanding to over 120 global cities.</li>
+                <li>🌪️ <strong>Weather Integration</strong> - Combining AQI with weather data for better insights.</li>
+                <li>🌍 <strong>Mapbox Earth Roaming</strong> - Adding a rotating globe feature for immersive exploration.</li>
+                <li>⭕ <strong>AQI Circles on Terrain</strong> - Making AQI indicators align with Earth's surface.</li>
+                <li>🔬 <strong>Expanded Pollution Forecast</strong> - Including additional pollutants in AQI predictions.</li>
+            </ul>
+        </section>
+
+        <nav class="nav-buttons">
+            <a href="vis.html" class="btn">🌎 Explore Visualization</a>
+            <a href="Cover_Origin _File.html" class="btn">🏠 Back to Home</a>
+        </nav>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 VanWU1 Studio. All rights reserved.</p>
+    </footer>
+</body>
+</html>
