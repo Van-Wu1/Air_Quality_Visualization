@@ -2,17 +2,26 @@ import { circleRadiusExpression, circleColorExpression } from './data.js';
 
 export let map;
 
-// 初始化地图
 export function initMap() {
-  mapboxgl.accessToken = 'pk.eyJ1IjoidmFuMTEyMDEwMTZ3dSIsImEiOiJjbTd1b2JodnMwMmV1MmpzYTlhcXJxNWJ1In0.PC95-6c3OQtSQoxlvNAWOA';
-  
-  map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/dark-v11',
-    center: [90.657104, 29.432596],
-    zoom: 1.5
-  });
-  map.addControl(new mapboxgl.NavigationControl());
+  return fetch('/token')
+    .then(res => res.json())
+    .then(data => {
+      mapboxgl.accessToken = data.token;
+      map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/dark-v11',
+        center: [90.657104, 29.432596],
+        zoom: 1.5
+      });
+
+      map.addControl(new mapboxgl.NavigationControl());
+
+      return new Promise((resolve) => {
+        map.on('load', () => {
+          resolve(map); // 地图加载完成才 resolve
+        });
+      });
+    });
 }
 
 export function flyto(){

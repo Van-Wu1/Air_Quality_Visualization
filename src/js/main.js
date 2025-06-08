@@ -12,8 +12,8 @@ import './chart.js';
 initMap();
 
 
-// 地图加载-执行初始化操作
-map.on('load', () => {
+// 初始化地图后执行
+initMap().then(() => {
   createLegend();
   updateTodayData();
   flyto();
