@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Global Air Quality Visualization</title>
   <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
   <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet" />
@@ -11,40 +12,49 @@
 
   <link rel="stylesheet" href="./src/styles/styles.css">
 </head>
+
 <body>
-  <div id="map"></div>
-  <div id="aqDate">Last updated：--</div>
-  <div id="realtime">The time is：--</div>
-
   <!-- 顶部导航栏 -->
-<div id="navbar">
-  <div id="navbarTitle">Global Air Quality Visualization Across 81 Cities 😷</div>
-  <button id="exportButton">Export a report</button>
-</div>
-
-  <!-- 图表 -->
-  <div id="chartContainer">
-    <canvas id="airChart"></canvas>
+  <div id="navbar">
+    <div id="navbarTitle">Global Air Quality Visualization Across 81 Cities 😷</div>
+    <button id="exportButton">Export a report</button>
   </div>
 
-  <!-- 图例 -->
-  <div id="legend"></div>
+  <div id="maincontent">
+    <div id="map"></div>
+    <div id="right">
+      <div id="realtime">The time is：--</div>
+      <div id="aqDate">Last updated：--</div>
+      
+      <div id="flyandlegend">
+        <!-- 飞 -->
+        <div id="flyto">
+          <div id="flytoheader">
+            <span>FlyTo------------------✈</span>
+          </div>
+          <div id="flytobutton">
+            <button id="Asia">Asia</button>
+            <button id="Europe">Europe</button>
+            <button id="North America">North America</button>
+            <button id="South America">South America</button>
+            <button id="Africa">Africa</button>
+            <button id="Oceania">Oceania</button>
+          </div>
+        </div>
 
-  <!-- 飞 -->
-  <div id="flyto">
-    <div id="flytoheader">
-      <span>FlyTo------------------✈</span>
+        <!-- 图例 -->
+        <div id="legend"></div>
+      </div>
+
+      <!-- 图表 -->
+      <div id="chartContainer">
+        <canvas id="airChart"></canvas>
+      </div>
     </div>
-    <div id="flytobutton">
-      <button id="Asia">Asia</button>
-      <button id="Europe">Europe</button>
-      <button id="North America">North America</button>
-      <button id="South America">South America</button>
-      <button id="Africa">Africa</button>
-      <button id="Oceania">Oceania</button>
-    </div>
+
   </div>
 
   <script type="module" src="./src/js/main.js"></script>
 </body>
+
 </html>

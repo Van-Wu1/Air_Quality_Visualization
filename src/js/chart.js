@@ -5,10 +5,10 @@ const ctx = document.getElementById('airChart').getContext('2d');
 const overlay = document.createElement('div');
 overlay.id = 'chartOverlay';
 overlay.style.position = 'absolute';
-overlay.style.top = '35%';
-overlay.style.left = '2%';
-overlay.style.width = '96%';
-overlay.style.height = '30%';
+overlay.style.top = '0';
+overlay.style.left = '0';
+overlay.style.width = '100%';
+overlay.style.height = '100%';
 overlay.style.borderRadius = '8px';
 overlay.style.backgroundColor = 'rgba(56, 56, 56, 0.85)';
 overlay.style.display = 'none';
@@ -19,13 +19,16 @@ overlay.style.fontSize = '20px';
 overlay.style.color = 'white';
 overlay.innerHTML = '😢 No forecast data is available for the city 😢';
 overlay.style.textAlign = 'center';
-chartContainer.appendChild(overlay); 
+chartContainer.appendChild(overlay);
+
+document.getElementById('chartContainer').style.position = 'relative';
+document.getElementById('chartContainer').appendChild(overlay);
 
 //柱状图
 const pm25Chart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: [], 
+        labels: [],
         datasets: [
             {
                 label: 'Avg',
@@ -33,7 +36,7 @@ const pm25Chart = new Chart(ctx, {
                 backgroundColor: 'rgba(255, 99, 132, 0.6)',
                 borderColor: 'rgba(255, 99, 132, 1)',
                 borderWidth: 0.5,
-                barThickness: 20, 
+                barThickness: 20,
                 categoryPercentage: 1
             },
             {
@@ -42,11 +45,11 @@ const pm25Chart = new Chart(ctx, {
                 backgroundColor: 'rgba(54, 162, 235, 0.6)',
                 borderColor: 'rgba(54, 162, 235, 1)',
                 borderWidth: 0.5,
-                barThickness: -20, 
-                categoryPercentage: 1 
+                barThickness: -20,
+                categoryPercentage: 1
             },
             {
-                label: 'Trend', 
+                label: 'Trend',
                 data: [],
                 type: 'line',
                 borderColor: 'rgba(0, 0, 0, 1)',
@@ -61,7 +64,7 @@ const pm25Chart = new Chart(ctx, {
         responsive: true,
         maintainAspectRatio: false,
         scales: {
-            x: { 
+            x: {
                 title: { display: true, text: 'Date' },
                 ticks: { autoSkip: false }
             },
@@ -111,12 +114,12 @@ export function updateAirChart(city) {
     next7Days.forEach((day) => {
         if (forecastMap.has(day)) {
             let value = forecastMap.get(day);
-            avgData.push(value); 
+            avgData.push(value);
             estimatedData.push(null);
-            trendLine.push(value); 
+            trendLine.push(value);
         } else {
-            avgData.push(null); 
-            estimatedData.push(lastValidValue); 
+            avgData.push(null);
+            estimatedData.push(lastValidValue);
             trendLine.push(lastValidValue);
         }
     });
@@ -126,9 +129,9 @@ export function updateAirChart(city) {
 
     // 更新数据
     pm25Chart.data.labels = next7Days;
-    pm25Chart.data.datasets[0].data = avgData; 
+    pm25Chart.data.datasets[0].data = avgData;
     pm25Chart.data.datasets[1].data = estimatedData;
-    pm25Chart.data.datasets[2].data = trendLine; 
+    pm25Chart.data.datasets[2].data = trendLine;
     pm25Chart.update();
 }
 

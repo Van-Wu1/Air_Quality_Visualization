@@ -11,7 +11,7 @@ export function initMap() {
         container: 'map',
         style: 'mapbox://styles/mapbox/dark-v11',
         center: [90.657104, 29.432596],
-        zoom: 1.5
+        zoom: 1.8
       });
 
       map.addControl(new mapboxgl.NavigationControl());
@@ -43,7 +43,7 @@ export function flyto(){
           console.log(`Flying to ${continent}:`, continentCenters[continent]);
           map.flyTo({
             center: continentCenters[continent],
-            zoom: 1.5,
+            zoom: 2.5,
             speed: 0.5,
             pitch: 0
           });
